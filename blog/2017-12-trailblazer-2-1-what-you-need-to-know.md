@@ -23,7 +23,7 @@ Your steps use the existing API, and everything here is as it used to be before.
 
     class Memo::Create < Trailblazer::Operation
       step :create_model
-
+    
       def create_model(options, params:, **)
         # ..
       end
@@ -88,7 +88,7 @@ The coolest feature.
 
 ## 7. Failure & Success vs Fail & Pass
 
-Steps `failure` and `success` are renamed to `fail` and `pass`. Now operation with multiple steps is a bit more streamlines visually. 
+Steps `failure` and `success` are renamed to `fail` and `pass`. Now operation with multiple steps is a bit more streamlined visually. 
     class Memo::Create < Trailblazer::Operation
       step :create_mode
       success :send_email
