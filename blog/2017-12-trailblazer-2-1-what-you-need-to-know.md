@@ -71,8 +71,25 @@ rewire
 
 The coolest feature.
 
-## 4. Extended Macro API
+## 5. Extended Macro API
 
 ## 6. Application Workflows
 
+## 7. Failure & Success vs Fail & Pass
+
+Steps `failure` and `success` are renamed to `fail` and `pass`. Now operation with multiple steps is a bit more streamlines visually. 
+    class Memo::Create < Trailblazer::Operation
+      step :create_mode
+      success :send_email
+      failure :handle_error
+    end
+
+Becomes
+
+    class Memo::Create < Trailblazer::Operation
+      step :create_mode
+      pass :send_email
+      fail :handle_error
+    end
 ## 10. New Gems
+
